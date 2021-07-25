@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tsp_heuristics"
-version = "0.2.0"
+version = "0.2.5"
 description = "Meta-heuristics for solving the TSP"
 authors = ["Adriel Martins <adrielfalcao@gmail.com>"]
 license = "The Unlicense"

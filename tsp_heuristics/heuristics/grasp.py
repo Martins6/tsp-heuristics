@@ -7,9 +7,6 @@ import numpy as np
 from tsp_heuristics.heuristics.local_search import local_search_algo
 from tsp_heuristics.heuristics.utils import get_tour_distance as compute_permutation_distance
 
-# Testing
-from tsp_heuristics.utils.readfile import tsplib_distance_matrix
-from tsp_heuristics.heuristics.nn import nn_algo
 
 def solve_tsp_grasp(
     distance_matrix: np.ndarray,
@@ -135,15 +132,6 @@ def setup(
     fx0 = compute_permutation_distance(x0, distance_matrix)
     return x0, fx0
 
-
-if __name__ == '__main__':
-    tsplib_file = "tests/test_data/a280.tsp"
-    distance_matrix = tsplib_distance_matrix(tsplib_file)
-
-    print(solve_tsp_grasp(distance_matrix))
-    
-    initial_tour = nn_algo(distance_matrix)[0]
-    print(local_search_algo(initial_tour, distance_matrix, method='first improvement'))
     
     
         
